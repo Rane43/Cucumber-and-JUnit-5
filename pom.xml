@@ -1,0 +1,65 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.prometheus</groupId>
+  <artifactId>testing</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+	  
+	<properties>
+	  <cucumber.version>7.22.1</cucumber.version>
+	  <junit.jupiter.version>5.12.2</junit.jupiter.version>
+	  <junit.platform.version>1.12.2</junit.platform.version>
+	</properties>
+	
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>io.cucumber</groupId>
+        <artifactId>cucumber-bom</artifactId>
+        <version>${cucumber.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+	
+	<dependencies>
+	  <!-- Cucumber -->
+	  <dependency>
+	    <groupId>io.cucumber</groupId>
+	    <artifactId>cucumber-java</artifactId>
+	    <scope>test</scope>
+	  </dependency>
+	  <dependency>
+	    <groupId>io.cucumber</groupId>
+	    <artifactId>cucumber-junit-platform-engine</artifactId>
+	    <scope>test</scope>
+	  </dependency>
+	
+	  <!-- JUnit 5 Platform -->
+	  <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter -->
+		<dependency>
+		    <groupId>org.junit.jupiter</groupId>
+		    <artifactId>junit-jupiter</artifactId>
+		    <version>${junit.jupiter.version}</version>
+		    <scope>test</scope>
+		</dependency>
+		
+	  <dependency>
+	    <groupId>org.junit.platform</groupId>
+	    <artifactId>junit-platform-suite</artifactId>
+	    <version>${junit.platform.version}</version>
+	    <scope>test</scope>
+	  </dependency>
+	
+	  <dependency>
+	    <groupId>org.junit.platform</groupId>
+	    <artifactId>junit-platform-commons</artifactId>
+	    <version>${junit.platform.version}</version>
+	    <scope>test</scope>
+	  </dependency>
+	</dependencies>
+</project>
